@@ -9,11 +9,16 @@
         Add new product
     </a>
 </p>
+<form th:action="@{/product/search}" method="get">
+    <input type="text" name="name", id="name" placeholder="Enter Name: "/>
+    <input type="submit" value="Tim Kiem"/>
+</form>
 <div class="notify">
     <div th:if="${success}">
         <span th:text="${success}"></span>
     </div>
 </div>
+
 <table id = "products">
     <thead>
     <tr>
